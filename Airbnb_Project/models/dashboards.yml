@@ -1,0 +1,20 @@
+version: 2
+
+exposures:
+  - name: executive_dashboard
+    label: Executive Dashboard
+    type: dashboard
+    maturity: low
+    url: https://9293b275.us2a.app.preset.io/superset/dashboard/8/?edit=true&native_filters_key=Y1a7_IfM3kydxOYLKcEj2soSFA0ooL3HtECQx-2i-480RKtCmleWJqUoDbCBkdpo
+    description: Executive Dashboard about Airbnb listings and hosts
+      
+
+    depends_on:
+      - ref('dim_listings_w_hosts')
+      - ref('fullmoon_reviews')
+      - ref('dim_hosts_cleansed')
+      - ref('fact_reviews')
+
+    owner:
+      name: Christian Caredio
+      email: christiancaredio@gmail.com
